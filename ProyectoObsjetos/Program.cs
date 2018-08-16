@@ -10,19 +10,29 @@ namespace ProyectoObsjetos
     {
         static void Main(string[] args)
         {
+            Contacto contacto1 = new Contacto(); // new es para creas las instancias de las clases
 
-            Persona persona1 = new Persona();
-            persona1.nombre = "Juan ";
-            persona1.apellidos = "Perez ";
-            persona1.edad = 20;
+            contacto1.Nombre = "Pedro Lopez";
+            contacto1.TelefonoCasa = "(644) 432- 3275";
+            contacto1.TelefonoCelular = "644-407-2375";
+            contacto1.Direccion = "5 de Febrero 510";
 
-            Console.WriteLine(persona1.nombre + persona1.apellidos + " tiene " + persona1.edad + " años de edad");
-            persona1.cumplirAños();
-            Console.WriteLine("Ahora " + persona1.nombre + "tiene " + persona1.edad + "años :) es su cumple");
-            persona1.altura = 1.82f;
-            Console.WriteLine(persona1.nombre +  " mide " + persona1.altura + " es una torre");
-            persona1.crecer(.3f);
-            Console.WriteLine("Ahora " + persona1.nombre + " mide " + persona1.altura + " de altura");
+            Console.WriteLine("Nombre: " + contacto1.Nombre);
+            Console.WriteLine("Telefono de casa: " + contacto1.TelefonoCasa);
+
+            Contacto contacto2 = new Contacto("Juan Perez");
+            Console.WriteLine("Contacto 2: ");
+            Console.WriteLine("Nombre: " + contacto2.Nombre);
+
+            Contacto contacto3 = new Contacto("Maria Navarro", "(644) 416 - 3885", 
+                "644 107 2875", "5 de Febrero", "maria-bonita@hotmail.com");
+            Console.WriteLine("Contacto 3: ");
+            Console.WriteLine("Nombre: " + contacto3.Nombre);
+            Console.WriteLine("Telefono de Casa: " + contacto3.TelefonoCasa);
+            Console.WriteLine("Telefono Celular: " + contacto3.TelefonoCelular);
+            Console.WriteLine("Direccion: " + contacto3.Direccion);
+            Console.WriteLine("Correo Electronico: " + contacto3.CorreoElectronico);
+
             Console.ReadLine();
         }
     }
